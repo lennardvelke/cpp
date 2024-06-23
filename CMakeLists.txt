@@ -29,6 +29,8 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
 
+target_include_directories(${PROJECT_NAME} PRIVATE include/)
+
 # Web Configurations
 if (${PLATFORM} STREQUAL "Web")
     # Tell Emscripten to build an example.html file.
